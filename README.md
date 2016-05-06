@@ -9,7 +9,7 @@ Code is in src/simpleGa package
 ####Algorithm.java
 ----------
 - Most of the "genetic" part of the genetic algorithm occurs here.
-- The algorithm parameters are stored here as private static final fields.
+- The algorithm parameters are stored here as private static final constants.
 
 #####Constants:
 - *double uniformRate*: the percentage of genes that a new individual inherits from one of its parents.  A value of 0.5 will cause a newly made individual to inheirit 50% of its genes from one of the parents and 50% of the genes from another.
