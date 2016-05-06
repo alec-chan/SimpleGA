@@ -23,3 +23,7 @@ Code is in src/simpleGa package
 
 #####Private Methods:
 *Individual crossover(Individual indiv1, Individual indiv2)*
+- Takes 2 Individuals as arguments - the *parents*
+- Creates a new individual - the *child*
+- Loops through the child's genes and for each gene, picks a parent to take that gene from based on the chance set in uniformRate
+- returns the newly formed child Individual.
