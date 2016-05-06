@@ -47,4 +47,20 @@ Code is in src/simpleGa package
 - *char[] genes*: the array of genes that make up the individual.  These do not have to be chars, any comparable types like boolean, int etc... will work, though a lot of code in other places will need to be updated to be compatible with different gene types.  When the genes of an individual == FitnessCalc.solution, then the algorithm is done and you have found your solution.
 - *double fitness*: The individual's fitness rating.  This is set from FitnessCalc.getFitness().  In this implementation of the algorithm, the algorithm is set to maximize this fitness rating.  In other implementations, the goal could be minimization.
 
+#####Public Methods:
+*void generateIndividual()*
+- This method is called right after creating the Individual.  It sets each of the Individual's genes to a random ASCII value between 32 and 126 inclusive.
+*int size()*
+- Returns the length of the gene array for the Individual.
+*int getFitness()*
+- Calls FitnessCalc.getFitness() and returns the fitness value for this Individual.
+*String toString()*
+- Overrides the toString() method and returns this Individuals genes as a String.
+
+--------
+####Population.java
+--------
+
+
+
 
