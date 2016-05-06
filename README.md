@@ -10,7 +10,7 @@ Code is in src/simpleGa package
 - Most of the "genetic" part of the genetic algorithm occurs here.
 - The algorithm parameters are stored here as private static final fields.
 
-#####Parameters:
+#####Constants:
 - *double uniformRate*: the percentage of genes that a new individual inherits from one of its parents.  A value of 0.5 will cause a newly made individual to inheirit 50% of its genes from one of the parents and 50% of the genes from another.
 - *double mutationRate*: the % chance for each of an individual's genes to mutate when creating a new individual.
 - *int tournamentSize*: the number of individuals picked out of the population to participate in a tournament when tournamentSelection is called.
