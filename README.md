@@ -23,4 +23,3 @@ Population evolvePopulation(Population pop)
 
 #####Private Methods:
 Individual crossover(Individual indiv1, Individual indiv2)
-- 
