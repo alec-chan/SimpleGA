@@ -25,5 +25,5 @@ Code is in src/simpleGa package
 *Individual crossover(Individual indiv1, Individual indiv2)*
 - Takes 2 Individuals as arguments - the *parents*
 - Creates a new individual - the *child*
-- Loops through the child's genes and for each gene, picks a parent to take that gene from based on the chance set in uniformRate
+- Loops through the child's genes and for each gene, picks a parent to inherit that gene from based on the chance set in uniformRate.  Setting uniformRate = 0.5 will cause 50% of the child's genes to come from one parent and 50% from another.
 - returns the newly formed child Individual.
