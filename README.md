@@ -90,8 +90,10 @@ Code is in src/simpleGa package
 *void setSolution(String newSolution)*
 - Accepts a String as argument, then converts it to char array and saves it to FitnessCalc.solution.
 - Sets Individual.setDefaultGeneLength() to solution.length to avoid any errors.
+- 
 *double getFitness(Individual individual)*
 - Evaluates the fitness of an Individual's genes by comparing each one to the corresponding gene in the solution array and adding 1 to the Individual's fitness score if the gene is equal to the solution gene.  ~This is currently just a binary evaluation of the fitness.  Could be changed to a distance evaluation, treating the genes as vectors and basing the fitness score on the distance between the Individual's gene and the solution gene.  Would need to change the algorithm to a minimization function by setting FitnessCalc.getMaxFitness() to 0.~
+- 
 *int getMaxFitness()*
 - Returns the maximum fitness that an Individual could possibly have.  In the case of a binary evaluation of fitness, this would be equal to the length of the solution array.
 
