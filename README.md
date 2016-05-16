@@ -1,4 +1,4 @@
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?maxAge=2592000?style=plastic)]()
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?maxAge=2592000?style=plastic)]()  [![Build Status](https://travis-ci.org/alec-chan/SimpleGA.svg?branch=master)](https://travis-ci.org/alec-chan/SimpleGA)
 # SimpleGA
 Simple String searching genetic algorithm
 
