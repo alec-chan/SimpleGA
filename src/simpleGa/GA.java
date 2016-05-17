@@ -6,7 +6,7 @@ package simpleGa;
  */
 public class GA {
 
-    public static void main(String[] args) {
+    public staString[] args) {
 
         // Set a candidate solution string.  ASCII values 32-126 valid.
         FitnessCalc.setSolution("1245713659135ADGVABadgbadgadgADG';[]09^&*");
