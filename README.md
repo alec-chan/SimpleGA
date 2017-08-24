@@ -2,27 +2,27 @@
 # SimpleGA
 Simple String searching genetic algorithm
 
-##Structure
+## Structure
 Code is in src/simpleGa package
 
 ----------
-####Algorithm.java
+#### Algorithm.java
 ----------
 - Most of the "genetic" part of the genetic algorithm occurs here.
 - The algorithm parameters are stored here as private static final constants.
 
-#####Constants:
+##### Constants:
 - *double uniformRate*: the percentage of genes that a new individual inherits from one of its parents.  A value of 0.5 will cause a newly made individual to inheirit 50% of its genes from one of the parents and 50% of the genes from another.
 - *double mutationRate*: the % chance for each of an individual's genes to mutate when creating a new individual.
 - *int tournamentSize*: the number of individuals picked out of the population to participate in a tournament when tournamentSelection is called.
 - *boolean elitism*: if set to true, elitism will be enabled in the evolvePopulation method.  This forces evolvePopulation to protect the fittest individual out of the population to make sure that it does not get its genes overwritten by mutation.  In general this will increase efficiency.
 
-#####Public Methods:
+##### Public Methods:
 *Population evolvePopulation(Population pop)*
 - This method is the main genetic method.  It accepts your current population pool as an argument and returns the next generation population.
 - To evolve the population to the next generation this method uses private methods: crossover, mutate and tournamentSelection.  
 
-#####Private Methods:
+##### Private Methods:
 *Individual crossover(Individual indiv1, Individual indiv2)*
 - Takes 2 Individuals as arguments - the *parents*
 - Creates a new individual - the *child*
@@ -37,17 +37,17 @@ Code is in src/simpleGa package
 - This method takes tournamentSize Individuals from the passed Population and then returns the fittest of those Individuals.
 
 --------
-####Individual.java
+#### Individual.java
 --------
 - This class represents an Individual from a Population
 - The Individual has an array of genes
 
-#####Properties
+##### Properties
 - *int defaultGeneLength*: the how many genes the individual should have.  Can be changed by setDefaultGeneLength() and should always match the length of the solution set in FitnessCalc.
 - *char[] genes*: the array of genes that make up the individual.  These do not have to be chars, any comparable types like boolean, int etc... will work, though a lot of code in other places will need to be updated to be compatible with different gene types.  When the genes of an individual == FitnessCalc.solution, then the algorithm is done and you have found your solution.
 - *double fitness*: The individual's fitness rating.  This is set from FitnessCalc.getFitness().  In this implementation of the algorithm, the algorithm is set to maximize this fitness rating.  In other implementations, the goal could be minimization.
 
-#####Public Methods:
+##### Public Methods:
 *void generateIndividual()*
 - This method is called right after creating the Individual.  It sets each of the Individual's genes to a random ASCII value between 32 and 126 inclusive.
 *int size()*
@@ -58,14 +58,14 @@ Code is in src/simpleGa package
 - Overrides the toString() method and returns this Individuals genes as a String.
 
 --------
-####Population.java
+#### Population.java
 --------
 - This class is a container for a group of Individuals.
 
-#####Fields:
+##### Fields:
 - *Individual[] individuals*: The group of Individuals contained in this Population.
 
-#####Public Methods:
+##### Public Methods:
 
 *ctor*
 - The contructor for this class takes 2 arguments, int populationSize, and boolean initialize.  populationSize determines how many Individuals will be contained in this Population.  If set to true, initialize will create populationSize number of Individuals, if set to false the Population will be created with no Individuals, requiring the use of saveIndividual() to populate the array.
@@ -77,14 +77,14 @@ Code is in src/simpleGa package
 - Sets the Individual at individuals[index] to the Individual passed in the arguments.
 
 -------
-####FitnessCalc.java
+#### FitnessCalc.java
 -------
 - This is a utility class used for performing fitness calculations on Individuals.
 
-#####Fields:
+##### Fields:
 - *char[] solution*: The ideal array of genes.  This is what the algorithm is searching for.  An Individual with genes = solution has a fitness level equal to FitnessCalc.getMaxFitness()
 
-#####Methods:
+##### Methods:
 - All methods are static
 
 *void setSolution(String newSolution)*
